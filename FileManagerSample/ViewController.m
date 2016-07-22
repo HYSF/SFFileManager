@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JureFileManager.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    UIImage *image = [UIImage imageNamed:@"4跟唱－开始前－1.jpg"];
+    NSData *data = UIImagePNGRepresentation(image);
+    JureFileManager *manager = [[JureFileManager alloc]init];
+    [manager addFile:data filePath:@"image" fileName:@"image1.jpg"];
+    
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
